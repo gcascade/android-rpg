@@ -1,0 +1,238 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".Battle">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|top">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skills"
+                android:id="@+id/buttonSkills"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/buttonAtk"
+                android:layout_toEndOf="@+id/buttonAtk"
+                android:background="@drawable/btn_white_glossy" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attack"
+                android:id="@+id/buttonAtk"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/btn_white_glossy" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pass"
+                android:id="@+id/buttonPass"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/buttonItem"
+                android:layout_toEndOf="@+id/buttonItem"
+                android:background="@drawable/btn_white_glossy" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item"
+                android:id="@+id/buttonItem"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/buttonSkills"
+                android:layout_toEndOf="@+id/buttonSkills"
+                android:background="@drawable/btn_white_glossy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="&apos;s turn. Choose an action"
+                android:id="@+id/battleMessage"
+                android:layout_above="@+id/hero1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false"
+                android:clickable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enemy 3"
+                android:id="@+id/enemy3"
+                android:layout_above="@+id/enemy2hp"
+                android:layout_toLeftOf="@+id/enemy2"
+                android:layout_toStartOf="@+id/enemy2"
+                android:layout_marginRight="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="hp"
+                android:id="@+id/hero1hp"
+                android:layout_above="@+id/buttonAtk"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hero 1"
+                android:id="@+id/hero1"
+                android:layout_above="@+id/hero1hp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="hp"
+                android:id="@+id/hero2hp"
+                android:layout_above="@+id/buttonSkills"
+                android:layout_toRightOf="@+id/buttonAtk"
+                android:layout_toEndOf="@+id/buttonAtk" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy3hp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="100"
+                android:layout_below="@+id/enemy3"
+                android:layout_alignLeft="@+id/enemy3"
+                android:layout_alignStart="@+id/enemy3"
+                android:progressTint="#2ff40d" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enemy 2"
+                android:id="@+id/enemy2"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/enemy1"
+                android:layout_toStartOf="@+id/enemy1"
+                android:layout_marginRight="35dp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy2hp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="100"
+                android:progressTint="#2ff40d"
+                android:layout_below="@+id/enemy2"
+                android:layout_alignLeft="@+id/enemy2"
+                android:layout_alignStart="@+id/enemy2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enemy"
+                android:id="@+id/enemy1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/enemy1hp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="100"
+                android:progressTint="#2ff40d"
+                android:layout_below="@+id/enemy1"
+                android:layout_alignLeft="@+id/enemy1"
+                android:layout_alignStart="@+id/enemy1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Turn"
+                android:id="@+id/turn"
+                android:layout_alignBottom="@+id/enemy1hp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hero 3"
+                android:id="@+id/hero3"
+                android:layout_below="@+id/battleMessage"
+                android:layout_toRightOf="@+id/hero2"
+                android:layout_toEndOf="@+id/hero2"
+                android:layout_marginLeft="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="hp"
+                android:id="@+id/hero3hp"
+                android:layout_alignTop="@+id/hero3"
+                android:layout_alignLeft="@+id/hero3"
+                android:layout_alignStart="@+id/hero3"
+                android:layout_marginTop="19dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hero 2"
+                android:id="@+id/hero2"
+                android:layout_above="@+id/hero1hp"
+                android:layout_toRightOf="@+id/hero1"
+                android:layout_toEndOf="@+id/hero1"
+                android:layout_marginLeft="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enemy Turn"
+                android:id="@+id/battleMessageEnemy"
+                android:layout_below="@+id/enemy1hp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="73dp"
+        android:text="Battle End"
+        android:id="@+id/battleEndButton"
+        android:layout_gravity="center" />
+
+</FrameLayout>

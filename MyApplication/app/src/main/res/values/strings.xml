@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="title_activity_view_hero">ViewHero</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_battle">battle</string>
+
+    <string name="title_activity_hero_status">heroStatus</string>
+</resources>
